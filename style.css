@@ -1,0 +1,126 @@
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0a0014, #1a0033, #3d007a);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 100px;
+  overflow: hidden;
+
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
+  padding: 40px;
+  width: 90%;
+  max-width: 450px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 80px;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 40px rgba(170, 0, 255, 0.7);
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 25px;
+  color: #c084fc;
+  text-shadow: 0 0 10px #b366ff, 0 0 20px #6600cc;
+  letter-spacing: 2px;
+}
+
+#word-container {
+  margin: 15px 0;
+  font-size: 1.2em;
+  color: #b366ff;
+  text-shadow: 0 0 10px #a64dff;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 2px solid #8000ff;
+  border-radius: 10px;
+  background: transparent;
+  color: #fff;
+  font-size: 1.1em;
+  outline: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+input[type="text"]:focus {
+  border-color: #b366ff;
+  box-shadow: 0 0 15px #b366ff;
+}
+
+button {
+  background: #8000ff;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1em;
+  box-shadow: 0 0 10px #a64dff;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #b366ff;
+  box-shadow: 0 0 25px #b366ff, 0 0 50px #9900ff;
+  transform: scale(1.05);
+}
+
+#result {
+  margin-top: 25px;
+  font-size: 1.2em;
+  color: #fff;
+  text-shadow: 0 0 10px #b366ff;
+  min-height: 40px;
+}
+
+.feedback-img {
+  width: 180px;
+  margin-top: 15px;
+  animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

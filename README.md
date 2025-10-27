@@ -53,4 +53,4 @@ O projeto é inspirado no **Jogo da Imitação**, com foco em aprendizado e dive
 ---
 
 ## 🛠 Como Executar
-
+https://jennifersouza-s2.github.io/ATV2_criptografia/
